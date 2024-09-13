@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bottom_navigation_view">
+        <item name="buttonStyle" type="style">@style/bottom_navigation_view</item>
+        <item name="itemTextColor">@color/color_navigation</item>
+        <item name="itemIconTint">@color/grey4</item>
+        <item name="android:textSize">@dimen/sp84</item>
+        <item name="android:background">@color/grey2</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+
+
+
+</resources>
