@@ -1,6 +1,4 @@
-package com.example.testtask24.firstScreen.domain
-
-import android.util.TypedValue
+package com.example.testtask24.firstScreen.domain.models
 
 data class Bank(
     val name: String?,

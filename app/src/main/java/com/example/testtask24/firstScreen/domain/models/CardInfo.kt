@@ -1,4 +1,4 @@
-package com.example.testtask24.firstScreen.domain
+package com.example.testtask24.firstScreen.domain.models
 
 data class CardInfo(
     val number: NumberCard?,

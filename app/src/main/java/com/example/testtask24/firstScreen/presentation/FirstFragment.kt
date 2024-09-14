@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.testtask24.databinding.FragmentFirstBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FirstFragment : Fragment() {
     private var _binding: FragmentFirstBinding? = null
     private val binding get() = _binding!!
+    val viewModel by viewModel<FirstFragmentViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,5 +29,4 @@ class FirstFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }
