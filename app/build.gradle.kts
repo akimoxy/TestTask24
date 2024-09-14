@@ -42,6 +42,7 @@ dependencies {
     val fragment_version = "1.8.3"
     val nav_version = "2.8.0"
     val room_version = "2.6.1"
+    val koin_version = "3.5.0"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -76,6 +77,11 @@ dependencies {
     //Room
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    //koin
+    implementation("io.insert-koin:koin-core")
+    implementation(platform("io.insert-koin:koin-bom:$koin_version"))
+    implementation(libs.koin.android)
 
 
 }
