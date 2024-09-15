@@ -1,3 +1,5 @@
 package com.example.testtask24.firstScreen.data.models
 
-data class BankDto ( )
+ open class Response{
+     var resultCode = 0
+ }

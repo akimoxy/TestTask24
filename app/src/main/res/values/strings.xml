@@ -23,8 +23,11 @@
     <string name="country">COUNTRY</string>
     <string name="bank">BANK</string>
 
+    <string name="toast_min_length">Введите минимум 6 цифр и повторите поиск</string>
+    <string name="toast_first_fragment_error">Ошибка. Повторите ввод</string>
+    <string name="latitude">latitude:</string>
+    <string name="longitude">longitude:</string>
 
-
-
+    <string name="list_history">История запросов</string>
 
 </resources>

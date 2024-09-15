@@ -7,5 +7,5 @@ import org.koin.dsl.module
 
 val presentationModule = module {
     viewModel<SecondFragmentViewModel> { SecondFragmentViewModel() }
-    viewModel<FirstFragmentViewModel> { FirstFragmentViewModel() }
+    viewModel<FirstFragmentViewModel> { FirstFragmentViewModel(seachInteractor = get()) }
 }
