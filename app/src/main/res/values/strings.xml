@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">TestTask24</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="history">История запросов</string>
+    <string name="search">Поиск</string>
+    <string name="hint"><font size="12">Введите первые 6–8 цифр \nномера карты (БИН/ИИН)</font></string>
+
+    <string name="scheme_network">SCHEME / NETWORK</string>
+    <string name="brand"> BRAND</string>
+
+    <string name="card_number">CARD NUMBER</string>
+    <string name="length">LENGTH</string>
+    <string name="luhn">LUHN</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+
+    <string name="type">TYPE</string>
+    <string name="debit">Debit</string>
+    <string name="credit">Credit</string>
+    <string name="prepaid">PREPAID</string>
+    <string name="country">COUNTRY</string>
+    <string name="bank">BANK</string>
+
+    <string name="toast_min_length">Введите минимум 6 цифр и повторите поиск</string>
+    <string name="toast_first_fragment_error">Ошибка. Повторите ввод</string>
+    <string name="latitude">latitude:</string>
+    <string name="longitude">longitude:</string>
+
+    <string name="list_history">История запросов</string>
+
 </resources>

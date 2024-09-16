@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/searchLeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/searchCenterGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/searchRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp16" />
+
+    <View
+        android:id="@+id/searchInputBackground"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/background"
+        app:layout_constraintEnd_toEndOf="@id/searchRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/regular"
+        android:gravity="center_vertical"
+        android:hint="@string/hint"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="8"
+        android:maxLines="1"
+        android:paddingStart="@dimen/dp8"
+        android:singleLine="true"
+        android:textColor="?attr/colorOnPrimary"
+        android:textColorHint="@color/grey4"
+        android:textCursorDrawable="@drawable/cursor"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintBottom_toBottomOf="@id/searchInputBackground"
+        app:layout_constraintEnd_toStartOf="@id/searchRightGuideline"
+        app:layout_constraintStart_toEndOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toTopOf="@id/searchInputBackground"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/search_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/orange_background"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp8"
+        android:paddingEnd="@dimen/dp8"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/searchInputBackground"
+        app:layout_constraintEnd_toStartOf="@id/searchRightGuideline"
+        app:layout_constraintTop_toTopOf="@id/searchInputBackground" />
+
+    <View
+        android:id="@+id/cardBackground"
+        android:layout_width="0dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/dark_grey_background"
+        app:layout_constraintEnd_toEndOf="@id/searchRightGuideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/searchInputBackground" />
+
+    <TextView
+        android:id="@+id/schemeTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp16"
+        android:text="@string/scheme_network"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toTopOf="@id/cardBackground" />
+
+    <TextView
+        android:id="@+id/scheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/schemeTittle"
+        tools:text="Visa" />
+
+    <TextView
+        android:id="@+id/typeTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp16"
+        android:text="@string/type"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toEndOf="@id/searchCenterGuideline"
+        app:layout_constraintTop_toTopOf="@id/cardBackground" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/typeTittle"
+        app:layout_constraintTop_toBottomOf="@id/typeTittle"
+        tools:text="Debit" />
+
+    <TextView
+        android:id="@+id/brandTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp16"
+        android:text="@string/brand"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/scheme" />
+
+    <TextView
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/brandTittle"
+        tools:text="Visa/Dankort" />
+
+    <TextView
+        android:id="@+id/prepaidTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp16"
+        android:text="@string/prepaid"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toEndOf="@id/searchCenterGuideline"
+        app:layout_constraintTop_toBottomOf="@id/type" />
+
+    <TextView
+        android:id="@+id/prepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/prepaidTittle"
+        app:layout_constraintTop_toBottomOf="@id/prepaidTittle"
+        tools:text="No" />
+
+    <TextView
+        android:id="@+id/cardNumberTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp16"
+        android:text="@string/card_number"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/brand" />
+
+    <TextView
+        android:id="@+id/lengthTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+
+        android:text="@string/length"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/cardNumberTittle" />
+
+    <TextView
+        android:id="@+id/luhnTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:text="@string/luhn"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintStart_toEndOf="@id/lengthTittle"
+        app:layout_constraintTop_toBottomOf="@id/cardNumberTittle" />
+
+    <TextView
+        android:id="@+id/length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/lengthTittle"
+        tools:text="16" />
+
+    <TextView
+        android:id="@+id/luhn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/luhnTittle"
+        app:layout_constraintTop_toBottomOf="@id/luhnTittle"
+        tools:text="Yes" />
+
+    <TextView
+        android:id="@+id/countryTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp16"
+        android:text="@string/country"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toEndOf="@id/searchCenterGuideline"
+        app:layout_constraintTop_toBottomOf="@id/prepaid" />
+
+    <TextView
+        android:id="@+id/countryAlfa2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/countryTittle"
+        app:layout_constraintTop_toBottomOf="@id/countryTittle"
+        tools:text="DK" />
+
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toEndOf="@id/countryAlfa2"
+        app:layout_constraintTop_toBottomOf="@id/countryTittle"
+        tools:text="Denmark" />
+
+    <TextView
+        android:id="@+id/countryLatitudeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp4"
+        android:text="@string/latitude"
+        android:textColor="@color/grey4"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintStart_toStartOf="@id/countryAlfa2"
+        app:layout_constraintTop_toBottomOf="@id/countryAlfa2" />
+
+    <TextView
+        android:id="@+id/countryLongitudeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp4"
+        android:text="@string/longitude"
+        android:textColor="@color/grey4"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintStart_toStartOf="@id/countryAlfa2"
+        app:layout_constraintTop_toBottomOf="@id/countryLatitudeTitle" />
+
+    <TextView
+        android:id="@+id/countryLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toBottomOf="@id/countryLatitudeTitle"
+        app:layout_constraintStart_toEndOf="@id/countryLatitudeTitle"
+        tools:text="56" />
+
+    <TextView
+        android:id="@+id/countryLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toBottomOf="@id/countryLongitudeTitle"
+        app:layout_constraintStart_toEndOf="@id/countryLongitudeTitle"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/bankTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp16"
+        android:text="@string/bank"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/length" />
+
+    <TextView
+        android:id="@+id/bankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/bankTittle"
+        tools:text="Jyske Bank" />
+
+    <TextView
+        android:id="@+id/bankCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toEndOf="@id/bankName"
+        app:layout_constraintTop_toBottomOf="@id/bankTittle"
+        tools:text="Hjørring" />
+
+    <TextView
+        android:id="@+id/bankUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/bankName"
+        tools:text="www.jyskebank.dk" />
+
+    <TextView
+        android:id="@+id/bankPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@id/searchLeftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/bankUrl"
+        tools:text="+4589893300" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
