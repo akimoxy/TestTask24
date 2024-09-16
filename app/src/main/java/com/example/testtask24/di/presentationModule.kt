@@ -6,6 +6,12 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val presentationModule = module {
-    viewModel<SecondFragmentViewModel> { SecondFragmentViewModel() }
-    viewModel<FirstFragmentViewModel> { FirstFragmentViewModel(seachInteractor = get()) }
+    viewModel<SecondFragmentViewModel> { SecondFragmentViewModel(historyInteractor = get()) }
+    viewModel<FirstFragmentViewModel> {
+        FirstFragmentViewModel(
+            seachInteractor = get(),
+            historyInteractor = get()
+        )
+    }
+
 }

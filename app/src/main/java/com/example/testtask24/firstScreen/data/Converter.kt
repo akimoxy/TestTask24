@@ -1,4 +1,4 @@
-package com.example.testtask24.firstScreen
+package com.example.testtask24.firstScreen.data
 
 import com.example.testtask24.firstScreen.data.models.BankDto
 import com.example.testtask24.firstScreen.data.models.CardInfoDto

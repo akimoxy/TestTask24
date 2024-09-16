@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.kapt)
+
 }
 
 android {
@@ -80,12 +82,18 @@ dependencies {
 
     //Room
     implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+    annotationProcessor(libs.androidx.room.compiler)
+
+    implementation(libs.androidx.room.ktx)
+
+
+
 
     //koin
     implementation("io.insert-koin:koin-core")
     implementation(platform("io.insert-koin:koin-bom:$koin_version"))
     implementation(libs.koin.android)
+    kapt("androidx.room:room-compiler:$room_version")
 
 
 }

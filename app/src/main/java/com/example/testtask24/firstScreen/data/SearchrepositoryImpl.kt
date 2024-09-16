@@ -1,10 +1,8 @@
 package com.example.testtask24.firstScreen.data
 
-import com.example.testtask24.firstScreen.Converter
 import com.example.testtask24.firstScreen.data.models.CardInfoDto
 import com.example.testtask24.firstScreen.data.models.SearchRequest
 import com.example.testtask24.firstScreen.domain.api.SearchRepository
-import com.example.testtask24.firstScreen.domain.models.CardInfo
 import com.example.testtask24.firstScreen.domain.models.CardInfoResponse
 
 class SearchrepositoryImpl(
