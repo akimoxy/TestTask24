@@ -54,8 +54,8 @@ class HistoryAdapter(
             visibility(item.brand, binding.brandItem)
             visibility(item.country?.name, binding.countryNameItem)
             visibility(item.country?.alpha2, binding.countryAlfa2Item)
-            visibility(item.country?.latitude, binding.countryLatitudeTitleItem)
-            visibility(item.country?.longitude, binding.countryLongitudeTitleItem)
+            visibility(item.country?.latitude, binding.countryLatitudeItem)
+            visibility(item.country?.longitude, binding.countryLongitudeItem)
             visibility(item.prepaid, binding.prepaidItem)
         }
 
